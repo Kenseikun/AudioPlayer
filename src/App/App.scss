@@ -1,1 +1,21 @@
+.player__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
 
+  width: 45vw;
+  height: 50vh;
+  border-radius: 15px;
+  background: rgb(43, 71, 156);
+  background: linear-gradient(
+    0deg,
+    rgb(60, 59, 127) 0%,
+    rgb(108, 130, 202) 100%
+  );
+
+  h1 {
+    font-weight: 300;
+  }
+}

@@ -32,7 +32,7 @@ function App() {
   const [songPlayed, setSongPlayed] = useState(0);
 
   return (
-    <>
+    <div className="player__wrapper">
       <h1>Music Player</h1>
       <SongCover songCover={songsList[songPlayed].coverUrl} />
       <AudioControler
@@ -43,7 +43,7 @@ function App() {
       />
 
       <SongsList songsList={songsList} />
-    </>
+    </div>
   );
 }
 

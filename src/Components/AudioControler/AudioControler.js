@@ -19,7 +19,7 @@ const AudioControler = ({ songUrl, songPlayed, setSongPlayed, songsList }) => {
   const nextSong = () => {
     if (songPlayed < songsList.length - 1) {
       setSongPlayed(songPlayed + 1);
-      audioRef.current.play();
+      setIsClicked(true);
     } else {
       alert("There is no more songs in your list...");
     }
@@ -28,7 +28,7 @@ const AudioControler = ({ songUrl, songPlayed, setSongPlayed, songsList }) => {
   const prevSong = () => {
     if (songPlayed > 0) {
       setSongPlayed(songPlayed - 1);
-      audioRef.current.play();
+      setIsClicked(true);
     } else {
       alert("There is no more songs in your list...");
     }
@@ -36,19 +36,29 @@ const AudioControler = ({ songUrl, songPlayed, setSongPlayed, songsList }) => {
 
   return (
     <div className="audio__controler__wrapper">
-      <audio ref={audioRef} key={songUrl} controls>
+      <audio ref={audioRef} key={songUrl}>
         <source src={songUrl} />
       </audio>
 
       <div className="btns__wrapper">
-        <button onClick={prevSong}>prev Song</button>
+        <button onClick={prevSong}>
+          <i className="fas fa-backward"></i>
+        </button>
         {isClicked ? (
-          <button onClick={handleAudioPlay}>Play</button>
+          <button onClick={handleAudioPlay}>
+            <i className="fas fa-play-circle"></i>
+          </button>
         ) : (
-          <button onClick={handleAudioPause}>Pause</button>
+          <button onClick={handleAudioPause}>
+            <i className="fas fa-pause-circle"></i>
+          </button>
         )}
 
-        <button onClick={nextSong}>next Song</button>
+        <button onClick={nextSong}>
+          <i className="fas fa-forward"></i>
+        </button>
+
+        <div></div>
       </div>
     </div>
   );

@@ -1,13 +1,10 @@
 import React from "react";
+import "./SongCover.scss";
 
 const SongCover = ({ songCover }) => {
   return (
     <div className="img__wrapper">
-      <img
-        src={songCover}
-        alt="song cover"
-        style={{ width: 250, height: 250 }}
-      />
+      <img className="img__cover" src={songCover} alt="song cover" />
     </div>
   );
 };
