@@ -1,12 +1,12 @@
 .player__wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 35px;
 
-  width: 45vw;
-  height: 50vh;
+  width: 90vw;
+  height: 90vh;
   border-radius: 15px;
   background: rgb(43, 71, 156);
   background: linear-gradient(

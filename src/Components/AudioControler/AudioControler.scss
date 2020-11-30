@@ -1,22 +1,25 @@
 .audio__controler__wrapper {
-  border: 1px solid red;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 100%;
   .btns__wrapper {
     width: 100%;
     display: flex;
-    justify-content: space-around;
-    gap: 30px;
+    justify-content: center;
+    align-items: center;
 
     button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       background-color: transparent;
       border: none;
       outline: none;
-      font-size: 30px;
+      width: 60px;
+      height: 60px;
+      padding: 60px;
+      font-size: 20px;
+
       &:nth-child(2) {
-        font-size: 50px;
+        font-size: 80px;
       }
     }
   }

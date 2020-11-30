@@ -34,7 +34,12 @@ function App() {
   return (
     <div className="player__wrapper">
       <h1>Music Player</h1>
-      <SongCover songCover={songsList[songPlayed].coverUrl} />
+      <SongCover
+        songCover={songsList[songPlayed].coverUrl}
+        artistName={songsList[songPlayed].artist}
+        songTitle={songsList[songPlayed].title}
+      />
+
       <AudioControler
         songUrl={songsList[songPlayed].audioUrl}
         songPlayed={songPlayed}
