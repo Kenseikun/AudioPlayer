@@ -15,7 +15,7 @@ const OwnMusicInput = ({ setOwnInput, ownInput }) => {
     <form className="own__music--container">
       <input type="text" placeholder="add your own url..." />
       <button type="submit">
-        <i className="fas fa-check-circle"></i>
+        <i className="fas fa-check-square"></i>
       </button>
     </form>
   );
