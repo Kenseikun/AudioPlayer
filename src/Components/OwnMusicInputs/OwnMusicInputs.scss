@@ -1,9 +1,13 @@
 .own__music--container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
+  margin: 10px auto;
+
   input {
+    text-align: center;
     width: 80%;
     padding: 5px;
     outline: none;
@@ -15,7 +19,7 @@
     background-color: transparent;
     outline: none;
     border: none;
-    font-size: 20px;
+    font-size: 30px;
     i {
       color: tomato;
     }

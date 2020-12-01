@@ -1,7 +1,7 @@
-import React, { useRef } from "react";
-import "./OwnMusicInput.scss";
+import React from "react";
+import "./OwnMusicInputs.scss";
 
-const OwnMusicInput = ({
+const OwnMusicInputs = ({
   setOwnSongUrlInput,
   ownSongUrlInput,
   handleInputSongUrl,
@@ -11,7 +11,15 @@ const OwnMusicInput = ({
       <input
         type="text"
         name="songNameUrlInput"
+        placeholder="add your song name..."
+        required
+      />
+
+      <input
+        type="text"
+        name="songNameUrlInput"
         placeholder="add your own url..."
+        required
       />
       <button type="submit">
         <i className="fas fa-check-square"></i>
@@ -20,4 +28,4 @@ const OwnMusicInput = ({
   );
 };
 
-export default OwnMusicInput;
+export default OwnMusicInputs;

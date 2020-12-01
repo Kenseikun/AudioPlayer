@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import AudioControler from "../Components/AudioControler/AudioControler";
-import OwnMusicInput from "../Components/OwnMusicInput/OwnMusicInput";
+import OwnMusicInputs from "../Components/OwnMusicInputs/OwnMusicInputs";
 import SongCover from "../Components/SongCover/SongCover";
 import SongsList from "../Components/SongsList/SongsList";
 
@@ -13,6 +13,7 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   const [ownSongUrlInput, setOwnSongUrlInput] = useState("");
+  const [songSelected, setSongSelected] = useState([]);
 
   const songURL = "https://examples.devmastery.pl/songs-api/songs";
 
@@ -25,8 +26,6 @@ function App() {
         setSongs(data);
       });
   }, []);
-
-  console.log(songs);
   if (loading) return "Loading...";
 
   const handleInputSongUrl = (e) => {
@@ -40,16 +39,14 @@ function App() {
       coverUrl: "https://examples.devmastery.pl/assets/audio/hangtime.jpg",
       title: "noName",
     };
-
-    setSongs([...songs, newSong]);
-    console.log(songs);
-
+    setSongs([...new Set([...songs, newSong])]);
     e.target.reset();
   };
 
   return (
     <div className="player__wrapper">
       <h1>Music Player</h1>
+
       {songs.length === 0 ? null : (
         <>
           <SongCover
@@ -57,13 +54,15 @@ function App() {
             artistName={songs[songPlayed].artist}
             songTitle={songs[songPlayed].title}
           />
+
           <AudioControler
             songUrl={songs[songPlayed].audioUrl}
             songPlayed={songPlayed}
             songsList={songs}
             setSongPlayed={setSongPlayed}
           />
-          <OwnMusicInput
+
+          <OwnMusicInputs
             setOwnInput={setOwnSongUrlInput}
             ownInput={ownSongUrlInput}
             handleInputSongUrl={handleInputSongUrl}

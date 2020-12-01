@@ -4,11 +4,15 @@ import "./SongsList.scss";
 const SongsList = ({ songsList }) => {
   return (
     <>
+      <h2>Songs List:</h2>
       <div className="songs__list--wrapper">
-        <h2>Songs List:</h2>
         <ul>
           {songsList.map((song) => {
-            return <li key={song.title}>{song.title}</li>;
+            return (
+              <li key={song.title}>
+                <p>{song.title}</p>
+              </li>
+            );
           })}
         </ul>
       </div>

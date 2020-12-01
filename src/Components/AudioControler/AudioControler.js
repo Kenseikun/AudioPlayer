@@ -35,7 +35,7 @@ const AudioControler = ({ songUrl, songPlayed, setSongPlayed, songsList }) => {
   };
 
   return (
-    <div className="audio__controler__wrapper">
+    <>
       <audio ref={audioRef} key={songUrl}>
         <source src={songUrl} />
       </audio>
@@ -57,10 +57,8 @@ const AudioControler = ({ songUrl, songPlayed, setSongPlayed, songsList }) => {
         <button onClick={nextSong}>
           <i className="fas fa-forward"></i>
         </button>
-
-        <div></div>
       </div>
-    </div>
+    </>
   );
 };
 

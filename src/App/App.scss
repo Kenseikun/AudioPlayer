@@ -1,9 +1,10 @@
 .player__wrapper {
+  text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 25px;
+  justify-content: space-between;
+  border: 1px solid black;
+  border-bottom: 15px solid black;
 
   width: 90vw;
   height: 90vh;
