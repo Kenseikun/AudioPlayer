@@ -1,19 +1,18 @@
 import React, { useRef } from "react";
 import "./OwnMusicInput.scss";
 
-const OwnMusicInput = ({ setOwnInput, ownInput }) => {
-  //   const inputUrlRef = useRef;
-
-  //   const handleOwnMusicInput = (e) => {
-  //     const inputValue = e.target.value;
-  //     setOwnInput(inputValue);
-  //   };
-
-  //   console.log(ownInput);
-
+const OwnMusicInput = ({
+  setOwnSongUrlInput,
+  ownSongUrlInput,
+  handleInputSongUrl,
+}) => {
   return (
-    <form className="own__music--container">
-      <input type="text" placeholder="add your own url..." />
+    <form className="own__music--container" onSubmit={handleInputSongUrl}>
+      <input
+        type="text"
+        name="songNameUrlInput"
+        placeholder="add your own url..."
+      />
       <button type="submit">
         <i className="fas fa-check-square"></i>
       </button>

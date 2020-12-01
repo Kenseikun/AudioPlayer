@@ -21,7 +21,7 @@ const AudioControler = ({ songUrl, songPlayed, setSongPlayed, songsList }) => {
       setSongPlayed(songPlayed + 1);
       setIsClicked(true);
     } else {
-      alert("There is no more songs in your list...");
+      alert("There is no more songs on your list...");
     }
   };
 
@@ -30,7 +30,7 @@ const AudioControler = ({ songUrl, songPlayed, setSongPlayed, songsList }) => {
       setSongPlayed(songPlayed - 1);
       setIsClicked(true);
     } else {
-      alert("There is no more songs in your list...");
+      alert("There is no more songs on your list...");
     }
   };
 
