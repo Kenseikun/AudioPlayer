@@ -24,8 +24,11 @@ function App() {
       .then((data) => {
         setLoading(false);
         setSongs(data);
+        // setSongSelected(songs);
+        // setSongSelected([...songs]);
       });
   }, []);
+
   if (loading) return "Loading...";
 
   const handleInputSongUrl = (e) => {
@@ -41,6 +44,24 @@ function App() {
     };
     setSongs([...new Set([...songs, newSong])]);
     e.target.reset();
+  };
+
+  const handleSelectedSong = (audioUrl) => {
+    const songSelectedArray = songSelected.map((song) => {
+      if (song.audioUrl === audioUrl) {
+        console.log(songSelected);
+      }
+      return song;
+    });
+
+    setSongSelected([...songSelectedArray]);
+  };
+
+  const selectSongFromSongsList = (song) => {
+    const indexOfSongIChooseToPlay = songs.indexOf(song);
+    console.log(indexOfSongIChooseToPlay);
+
+    setSongPlayed(indexOfSongIChooseToPlay);
   };
 
   return (
@@ -68,7 +89,13 @@ function App() {
             handleInputSongUrl={handleInputSongUrl}
           />
 
-          <SongsList songsList={songs} />
+          <SongsList
+            songsList={songs}
+            songPlayed={songPlayed}
+            handleSelectedSong={handleSelectedSong}
+            songSelected={songSelected}
+            selectSongFromSongsList={selectSongFromSongsList}
+          />
         </>
       )}
     </div>
@@ -76,3 +103,5 @@ function App() {
 }
 
 export default App;
+
+// 19:30

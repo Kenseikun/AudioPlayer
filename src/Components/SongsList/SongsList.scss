@@ -5,9 +5,11 @@ h2 {
 .songs__list--wrapper {
   text-align: center;
   width: 100%;
-  min-height: 20%;
+  max-height: 20%;
   overflow: auto;
   box-shadow: inset 0px 0px 12px 1px #161649;
+  position: absolute;
+  bottom: 0;
 
   ul {
     list-style: none;
@@ -18,19 +20,22 @@ h2 {
     }
   }
 }
+.red {
+  color: red;
+}
 
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
 ::-webkit-scrollbar-thumb {
-  background-color: #3930b8;
+  background-color: #306bb8;
   border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #2c2499;
+  background-color: #244999;
 }
 ::-webkit-scrollbar-track {
-  background: #050c53;
+  background: #052953;
   border-radius: 10px;
 }

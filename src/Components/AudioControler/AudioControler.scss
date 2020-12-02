@@ -2,20 +2,20 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 50px;
 
   button {
     background-color: transparent;
     border: none;
     outline: none;
-    font-size: 20px;
+    font-size: 16px;
 
     &:hover {
       text-shadow: 2px 2px 6px rgb(0, 0, 0);
     }
 
     &:nth-child(2) {
-      font-size: 50px;
+      font-size: 40px;
     }
   }
 }

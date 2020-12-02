@@ -2,12 +2,13 @@
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  // justify-content: space-between;
+  position: relative;
   border: 1px solid black;
   border-bottom: 15px solid black;
 
-  width: 90vw;
-  height: 90vh;
+  width: 95vw;
+  height: 95vh;
   border-radius: 15px;
   background-image: linear-gradient(
     to bottom,
@@ -18,9 +19,10 @@
     #19404a
   );
 
-  box-shadow: 0px 0px 20px 0px rgba(50, 50, 50, 0.59);
+  box-shadow: 0px 0px 12px 8px rgba(50, 50, 50, 0.59);
 
   h1 {
+    font-size: 20px;
     font-weight: 300;
     margin: 10px auto;
   }
