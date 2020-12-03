@@ -2,7 +2,7 @@ import React from "react";
 import "./SongsList.scss";
 
 const SongsList = ({
-  songsList,
+  songs,
   songSelected,
   handleSelectedSong,
   songPlayed,
@@ -14,9 +14,9 @@ const SongsList = ({
       <h2>Songs List:</h2>
       <div className="songs__list--wrapper">
         <ul>
-          {songsList.length === 0
+          {songs.length === 0
             ? null
-            : songsList.map((song) => {
+            : songs.map((song) => {
                 const { title, audioUrl } = song;
                 return (
                   <li key={title}>
@@ -24,8 +24,8 @@ const SongsList = ({
                       onClick={() => selectSongFromSongsList(song)}
                       style={{
                         color:
-                          songsList[songPlayed].audioUrl === audioUrl
-                            ? "red"
+                          songs[songPlayed].audioUrl === audioUrl
+                            ? "tomato"
                             : "",
                       }}
                     >

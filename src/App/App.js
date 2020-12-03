@@ -90,7 +90,7 @@ function App() {
           />
 
           <SongsList
-            songsList={songs}
+            songs={songs}
             songPlayed={songPlayed}
             handleSelectedSong={handleSelectedSong}
             songSelected={songSelected}

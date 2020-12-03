@@ -19,6 +19,7 @@ const AudioControler = ({ songUrl, songPlayed, setSongPlayed, songsList }) => {
   const nextSong = () => {
     if (songPlayed < songsList.length - 1) {
       setSongPlayed(songPlayed + 1);
+
       setIsClicked(true);
     } else {
       alert("There is no more songs on your list...");
