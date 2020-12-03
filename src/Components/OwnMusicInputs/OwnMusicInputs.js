@@ -10,14 +10,14 @@ const OwnMusicInputs = ({
     <form className="own__music--container" onSubmit={handleInputSongUrl}>
       <input
         type="text"
-        name="songNameUrlInput"
-        placeholder="add your song name..."
+        name="songTitleUrlInput"
+        placeholder="add your song title..."
         required
       />
 
       <input
         type="text"
-        name="songNameUrlInput"
+        name="songUrlInput"
         placeholder="add your own url..."
         required
       />

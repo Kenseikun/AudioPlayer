@@ -11,9 +11,7 @@ function App() {
   const [songs, setSongs] = useState([]);
   const [songPlayed, setSongPlayed] = useState(0);
   const [loading, setLoading] = useState(true);
-
   const [ownSongUrlInput, setOwnSongUrlInput] = useState("");
-  const [songSelected, setSongSelected] = useState([]);
 
   const songURL = "https://examples.devmastery.pl/songs-api/songs";
 
@@ -24,8 +22,6 @@ function App() {
       .then((data) => {
         setLoading(false);
         setSongs(data);
-        // setSongSelected(songs);
-        // setSongSelected([...songs]);
       });
   }, []);
 
@@ -33,28 +29,18 @@ function App() {
 
   const handleInputSongUrl = (e) => {
     e.preventDefault();
-    const audioUrl = e.target.songNameUrlInput.value;
+    const audioUrl = e.target.songUrlInput.value;
+    const title = e.target.songTitleUrlInput.value;
     // const productId = Math.floor(Math.random() * 1000);
 
     const newSong = {
       artist: "noName",
       audioUrl,
       coverUrl: "https://examples.devmastery.pl/assets/audio/hangtime.jpg",
-      title: "noName",
+      title,
     };
     setSongs([...new Set([...songs, newSong])]);
     e.target.reset();
-  };
-
-  const handleSelectedSong = (audioUrl) => {
-    const songSelectedArray = songSelected.map((song) => {
-      if (song.audioUrl === audioUrl) {
-        console.log(songSelected);
-      }
-      return song;
-    });
-
-    setSongSelected([...songSelectedArray]);
   };
 
   const selectSongFromSongsList = (song) => {
@@ -92,8 +78,6 @@ function App() {
           <SongsList
             songs={songs}
             songPlayed={songPlayed}
-            handleSelectedSong={handleSelectedSong}
-            songSelected={songSelected}
             selectSongFromSongsList={selectSongFromSongsList}
           />
         </>

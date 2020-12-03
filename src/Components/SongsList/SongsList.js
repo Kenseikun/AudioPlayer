@@ -1,14 +1,7 @@
 import React from "react";
 import "./SongsList.scss";
 
-const SongsList = ({
-  songs,
-  songSelected,
-  handleSelectedSong,
-  songPlayed,
-  selectSongFromSongsList,
-}) => {
-  console.log(songSelected);
+const SongsList = ({ songs, songPlayed, selectSongFromSongsList }) => {
   return (
     <>
       <h2>Songs List:</h2>
